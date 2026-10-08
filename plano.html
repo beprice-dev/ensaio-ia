@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Plano — Ensaio com IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+<p class="kick">Plano de negócio · uso interno · outubro 2026</p>
+<h1>Ensaio fotográfico com IA</h1>
+<p class="lead">Vender ensaios gerados a partir de fotos reais do cliente, usando o pipeline local que já existe (RTX 5070, ~90 s por imagem). Custo de produção quase zero; o trabalho é curadoria e atendimento.</p>
+
+<h2>Veredito</h2>
+<div class="note"><p><strong>Viável, com investimento baixo.</strong> Já existe mercado no Brasil, os preços estão bem abaixo do fotógrafo tradicional, e o diferencial possível é qualidade: rosto preservado, sem "pele de cera". O risco principal é jurídico e de reputação, e se resolve com termo de consentimento e transparência.</p></div>
+
+<h2>Mercado: quanto se cobra hoje</h2>
+<div class="tbl"><table>
+<tr><th>Quem</th><th>Oferta</th><th>Preço</th></tr>
+<tr><td>Freelas Vintepila</td><td>3–6 fotos</td><td>R$ 20–40</td></tr>
+<tr><td>Freela "realista" Vintepila</td><td>pacote + 10 extras</td><td>R$ 150 (+R$ 40)</td></tr>
+<tr><td>Solaire</td><td>6 imagens, 3 dias úteis</td><td>R$ 199</td></tr>
+<tr><td>Ensaio Digital PRO</td><td>5 / 15 / 35 fotos</td><td>R$ 97 / 187 / 577</td></tr>
+<tr><td>Pribe IA</td><td>5 / 10 / 15 fotos</td><td>~R$ 180 / 340 / 495</td></tr>
+<tr><td>AEW Digital</td><td>32 / 64 fotos</td><td>R$ 385 / 495</td></tr>
+<tr><td>Aragon, BetterPic (EUA, automático)</td><td>20–120 headshots</td><td>US$ 35–79</td></tr>
+<tr><td>Fotógrafo tradicional</td><td>ensaio pessoal, 20–40 fotos</td><td>R$ 300–1.200</td></tr>
+<tr><td>Fotógrafo tradicional</td><td>headshot corporativo, 10 fotos</td><td>R$ 400–900</td></tr>
+</table></div>
+<p>Leitura: o mercado tem um fundo barato (R$ 20, qualidade duvidosa) e um meio entre R$ 100 e R$ 500. Os apps gringos são automáticos e entregam muitas fotos ruins (estimativa de 10–25% aproveitáveis). Dá para competir no meio com curadoria humana.</p>
+
+<h2>Público</h2>
+<ul>
+  <li><strong>Prioridade 1:</strong> profissionais liberais (advogadas, médicas, dentistas, corretores, psicólogas). Precisam de foto séria, pagam bem, e o caso da Jéssica já serve de exemplo.</li>
+  <li><strong>Prioridade 2:</strong> criadoras de conteúdo e pequenas influencers, que querem fotos novas com frequência. Dá para vender recorrência.</li>
+  <li><strong>Evitar:</strong> book de modelo para agência. Agências exigem polaroids reais; foto de IA pode prejudicar a modelo.</li>
+</ul>
+
+<h2>Oferta e preço</h2>
+<div class="tbl"><table>
+<tr><th>Pacote</th><th>Entrega</th><th>Preço</th><th>Tempo estimado seu</th></tr>
+<tr><td>Essencial</td><td>5 fotos, 1 estilo</td><td>R$ 97</td><td>~1 h</td></tr>
+<tr><td>Profissional</td><td>15 fotos, 3 estilos, 1 ajuste</td><td>R$ 197</td><td>~2 h</td></tr>
+<tr><td>Completo</td><td>30 fotos, 6 estilos, 1 ajuste</td><td>R$ 347</td><td>~3–4 h</td></tr>
+</table></div>
+<p>Os tempos são palpite. Medir de verdade no ensaio da amiga e ajustar. Gerar 3–4 imagens por foto entregue para ter o que curar.</p>
+<p><strong>Lançamento:</strong> 10 primeiros clientes com 40% de desconto em troca de depoimento e autorização de uso no portfólio.</p>
+
+<h2>Custos</h2>
+<ul>
+  <li>GPU já existe. Energia: centavos por ensaio.</li>
+  <li>Hospedagem da página: GitHub Pages, grátis.</li>
+  <li>Domínio próprio (opcional): ~R$ 40/ano.</li>
+  <li>Tráfego pago (opcional, depois de ter portfólio): começar com R$ 10–20/dia no Instagram.</li>
+  <li>Formalização: MEI quando começar a faturar com frequência.</li>
+</ul>
+
+<h2>Operação</h2>
+<ol class="steps">
+  <li>Cliente chama no WhatsApp, escolhe pacote, paga via Pix.</li>
+  <li>Assina termo de consentimento (pode ser por formulário ou mensagem registrada).</li>
+  <li>Manda 10–15 fotos. Conferir qualidade antes de começar.</li>
+  <li>Gerar no pipeline (Qwen-Image-Edit no ComfyUI + acabamento), curar, entregar.</li>
+  <li>1 rodada de ajuste. Apagar fotos de origem em até 30 dias.</li>
+</ol>
+
+<h2>Jurídico e ética</h2>
+<div class="note"><ul>
+  <li><strong>LGPD:</strong> foto de rosto pode ser tratada como dado biométrico (sensível, art. 5º II e art. 11). Exige consentimento específico e destacado, com finalidade e prazo de guarda claros, e direito de revogar. Termo genérico não basta.</li>
+  <li><strong>Só a própria pessoa:</strong> nunca gerar a partir de fotos de terceiros nem de menores. Isso protege contra uso para deepfake.</li>
+  <li><strong>Transparência:</strong> dizer que é IA. A Meta aplica o selo "Info de IA" automaticamente quando detecta; para imagem estática, declarar é opcional.</li>
+  <li><strong>Portfólio:</strong> autorização por escrito para usar antes/depois de cada cliente.</li>
+  <li>Fontes de LGPD são de escritórios e blogs, não da ANPD. Vale conferir com um advogado (a Jéssica?) e montar o termo com ela.</li>
+</ul></div>
+
+<h2>Riscos</h2>
+<ul>
+  <li>Cliente não se reconhece: mitigar com curadoria, não gerar rosto novo, e rodada de ajuste.</li>
+  <li>Preço em queda pela concorrência barata: vender qualidade e atendimento, não volume.</li>
+  <li>Rejeição a IA em parte do público: ser transparente desde o início.</li>
+  <li>Dependência de um único PC: backup do pipeline e dos modelos.</li>
+</ul>
+
+<h2>Primeiros passos</h2>
+<ol class="steps">
+  <li>Ensaio grátis da amiga, tratado como cliente real. Cronometrar tudo.</li>
+  <li>Pedir autorização à Jéssica para usar o antes/depois dela. A Mica (persona virtual) já está na página como galeria de estilos, rotulada como IA.</li>
+  <li>Montar o termo de consentimento.</li>
+  <li>Preencher a página de venda com nome, WhatsApp e fotos reais.</li>
+  <li>Criar Instagram do serviço e fechar os 10 clientes de lançamento.</li>
+  <li>Revisar preço e tempo depois dos 10.</li>
+</ol>
+
+<h2>Fontes</h2>
+<ul style="font-size:.9rem">
+  <li><a href="https://www.vintepila.com.br/servicos/design-grafico/eu-vou-fazer-ensaio-fotografico-com-ia-5-fotos-por-20/">Vintepila — ensaio IA 5 fotos</a></li>
+  <li><a href="https://ensaiodigitalpro.com/">Ensaio Digital PRO</a> · <a href="https://www.birosolaire.com.br/ensaio_fotografico_ai">Solaire</a> · <a href="https://www.perlaribeiro.com.br/">Pribe IA</a> · <a href="https://aewdigital.com.br/ensaio-fotografico-com-ia/">AEW Digital</a> · <a href="https://visioai.app/pt-br/ensaio-fotografico-ia/">Visio AI</a></li>
+  <li><a href="https://agnaldoteixeira.com.br/guias/tabela-de-precos-fotografia-2026/">Tabela de preços de fotografia 2026</a> · <a href="https://filmly.com.br/guia/quanto-cobrar-ensaio-fotografico">Filmly</a> · <a href="https://www.freelasemcrise.com.br/quanto-cobrar/ensaio-fotografico-corporativo">Freela sem Crise</a></li>
+  <li><a href="https://www.headshots.com/blog/aragon-vs-betterpic/">Aragon vs BetterPic</a> · <a href="https://fritz.ai/aragon-ai-review/">Fritz — Aragon review</a></li>
+  <li><a href="https://confidata.com.br/blog/lgpd-dados-biometricos-reconhecimento-facial-digital">Confidata — LGPD e biometria</a> · <a href="https://becompliance.com/lgpd-e-o-uso-de-imagem-e-voz-sao-dados-pessoais-sensiveis-entenda-o-risco/">BeCompliance — imagem e LGPD</a></li>
+  <li><a href="https://canaltech.com.br/redes-sociais/meta-ajusta-rotulos-de-ia-em-imagens-editadas-no-facebook-e-instagram/">Canaltech — rótulos de IA da Meta</a> · <a href="https://pubbly.com.br/blog/rotulo-de-ia-no-instagram/">Pubbly — rótulo IA Instagram</a></li>
+</ul>
+
+<footer><a href="index.html">Ver página de venda</a></footer>
+</div>
+</body>
+</html>
