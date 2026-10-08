@@ -1,2 +1,3 @@
 User-agent: *
-Disallow: /
+Disallow: /plano.html
+Sitemap: https://beprice-dev.github.io/ensaio-ia/sitemap.xml

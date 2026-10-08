@@ -2,74 +2,265 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex">
-<title>Retrato Studio — Ensaio fotográfico com IA</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ensaio Fotográfico com IA para Modelos e Criadoras | Retrato Studio</title>
+<meta name="description" content="Ensaio fotográfico profissional com inteligência artificial a partir das suas fotos. Estúdio, editorial, urbano e fitness. Entrega em até 3 dias úteis, a partir de R$ 97.">
+<link rel="canonical" href="https://beprice-dev.github.io/ensaio-ia/">
+<meta name="theme-color" content="#171311">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Retrato Studio">
+<meta property="og:title" content="Seu ensaio de estúdio, sem estúdio">
+<meta property="og:description" content="Ensaio fotográfico com IA para modelos e criadoras de conteúdo. Fotos editoriais com o seu rosto, em até 3 dias úteis.">
+<meta property="og:url" content="https://beprice-dev.github.io/ensaio-ia/">
+<meta property="og:image" content="https://beprice-dev.github.io/ensaio-ia/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Ensaio fotográfico com IA","serviceType":"Ensaio fotográfico com inteligência artificial","areaServed":"BR","provider":{"@type":"Organization","name":"Retrato Studio","url":"https://beprice-dev.github.io/ensaio-ia/"},
+"offers":[{"@type":"Offer","name":"Essencial","price":"97","priceCurrency":"BRL"},{"@type":"Offer","name":"Profissional","price":"247","priceCurrency":"BRL"},{"@type":"Offer","name":"Personalizado","price":"497","priceCurrency":"BRL"}]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#171311;--bg2:#211b18;--ink:#f6f1ea;--mute:#b4a89c;--line:#3a312b;--gold:#d6a078;--card:#1e1916}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.in{max-width:1120px;margin:0 auto;padding-inline:20px}
+.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+.kick{text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;color:var(--gold);font-weight:600;margin:0 0 14px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.05;margin:0}
+h2{font-size:clamp(2.2rem,5.5vw,3.6rem);margin-bottom:18px}
+h2 em,h1 em{color:var(--gold)}
+section{padding-block:clamp(64px,10vw,120px)}
+.lead{color:var(--mute);font-size:1.08rem;max-width:560px}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#171311;padding:16px 28px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line)}
+
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:rgba(23,19,17,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .in{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:1.5rem;letter-spacing:.04em;text-decoration:none}
+nav .btn{padding:10px 20px;font-size:.9rem}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding-block:56px 80px}
+.hero h1{font-size:clamp(3rem,8vw,6.2rem)}
+.hero .lead{margin:24px 0 32px}
+.hero-img{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:top}
+.badge{position:absolute;left:16px;bottom:16px;background:rgba(23,19,17,.8);backdrop-filter:blur(8px);padding:10px 14px;border-radius:12px;font-size:.8rem;color:var(--mute)}
+.badge b{color:var(--ink);display:block;font-size:.95rem}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:36px;margin-top:40px;flex-wrap:wrap}
+.stats b{font-family:"Cormorant Garamond",serif;font-size:2.2rem;font-weight:500;display:block;line-height:1}
+.stats span{color:var(--mute);font-size:.85rem}
+
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding-block:18px}
+.marq div{display:inline-block;animation:m 30s linear infinite;font-family:"Cormorant Garamond",serif;font-size:1.6rem;font-style:italic;color:var(--mute)}
+.marq span{margin-inline:28px;color:var(--gold);font-style:normal}
+@keyframes m{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marq div{animation:none}}
+
+/* galeria */
+.gal{columns:3 260px;column-gap:14px;margin-top:40px}
+.gal figure{margin:0 0 14px;break-inside:avoid;position:relative;border-radius:16px;overflow:hidden}
+.gal img{width:100%;transition:transform .6s}
+.gal figure:hover img{transform:scale(1.04)}
+.gal figcaption{position:absolute;left:12px;bottom:12px;background:rgba(23,19,17,.75);padding:6px 12px;border-radius:999px;font-size:.78rem;letter-spacing:.06em}
+.cap{color:var(--mute);font-size:.85rem;margin-top:8px}
+
+/* para quem */
+.alt{background:var(--bg2)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-top:40px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.card h3{font-size:1.7rem;margin-bottom:8px}
+.card p{color:var(--mute);margin:0}
+
+/* passos */
+.steps{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:40px;counter-reset:s}
+.step{border-top:1px solid var(--gold);padding-top:20px;counter-increment:s}
+.step::before{content:"0" counter(s);font-family:"Cormorant Garamond",serif;font-size:2.6rem;color:var(--gold);display:block;line-height:1;margin-bottom:12px}
+.step h3{font-size:1.45rem;margin-bottom:6px}
+.step p{color:var(--mute);margin:0;font-size:.95rem}
+
+/* preços */
+.prices{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));margin-top:40px;align-items:stretch}
+.plan{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:32px;display:flex;flex-direction:column}
+.plan.hi{background:linear-gradient(180deg,#2b211b,#1e1916);border:1.5px solid var(--gold);position:relative}
+.plan .tag{position:absolute;top:-13px;left:32px;background:var(--gold);color:#171311;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:5px 12px;border-radius:999px}
+.plan h3{font-size:1.9rem}
+.plan .sub{color:var(--mute);font-size:.92rem;margin:4px 0 20px}
+.amt{font-family:"Cormorant Garamond",serif;font-size:3.4rem;line-height:1}
+.amt small{font-family:Inter,sans-serif;font-size:.85rem;color:var(--mute)}
+.per{color:var(--gold);font-size:.85rem;margin:6px 0 22px}
+.plan ul{list-style:none;padding:0;margin:0 0 28px;flex:1}
+.plan li{padding:9px 0 9px 26px;border-top:1px solid var(--line);position:relative;font-size:.95rem}
+.plan li::before{content:"✓";position:absolute;left:0;color:var(--gold)}
+.plan .btn{justify-content:center}
+.launch{margin-top:24px;text-align:center;color:var(--mute);font-size:.92rem}
+.launch b{color:var(--gold)}
+
+/* faq */
+details{border-bottom:1px solid var(--line);padding:20px 0}
+summary{cursor:pointer;font-family:"Cormorant Garamond",serif;font-size:1.45rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::after{content:"+";color:var(--gold)}
+details[open] summary::after{content:"–"}
+details p{color:var(--mute);margin:12px 0 0;max-width:720px}
+.faq{max-width:820px;margin-top:24px}
+
+/* cta final */
+.final{text-align:center}
+.final h2{font-size:clamp(2.6rem,7vw,5rem)}
+.final .lead{margin:0 auto 32px}
+footer{border-top:1px solid var(--line);padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));color:var(--mute);font-size:.82rem}
+footer .in{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+
+@media (max-width:820px){
+  .hero{grid-template-columns:1fr;padding-top:32px}
+  .hero-img{order:-1;aspect-ratio:4/5;max-height:70vh}
+  nav .btn{display:none}
+}
+</style>
 </head>
 <body>
-<div class="wrap">
 
-<p class="kick">Retrato Studio · ensaio com IA</p>
-<h1>Seu ensaio de estúdio, sem sair de casa.</h1>
-<p class="lead">Você manda selfies e fotos do celular. A gente entrega um ensaio com cara de estúdio profissional, com o seu rosto de verdade, em até 3 dias úteis.</p>
-<p><a class="btn" href="#contato">Quero meu ensaio</a></p>
+<nav><div class="in">
+  <a class="logo" href="#">Retrato Studio</a>
+  <a class="btn" href="#pacotes">Ver pacotes</a>
+</div></nav>
 
-<h2>Estilos</h2>
-<div class="gal">
-  <figure><img src="img/estudio.jpg" alt="Retrato em estúdio com fundo branco" loading="lazy"><figcaption>Estúdio</figcaption></figure>
-  <figure><img src="img/corporativo.jpg" alt="Retrato corporativo com casaco caramelo" loading="lazy"><figcaption>Corporativo</figcaption></figure>
-  <figure><img src="img/editorial.jpg" alt="Editorial com vestido vermelho em galeria de arte" loading="lazy"><figcaption>Editorial</figcaption></figure>
-  <figure><img src="img/urbano.jpg" alt="Foto externa em rua de cidade" loading="lazy"><figcaption>Externo urbano</figcaption></figure>
-  <figure><img src="img/casual.jpg" alt="Look casual com moletom na rua" loading="lazy"><figcaption>Casual</figcaption></figure>
-  <figure><img src="img/lifestyle.jpg" alt="Pose agachada em estúdio cinza" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
-</div>
-<p class="cap">Exemplos feitos com a Mica, uma persona virtual criada 100% por IA. No seu ensaio, partimos das suas fotos reais.</p>
+<header class="in hero">
+  <div>
+    <p class="kick">Ensaio fotográfico com IA</p>
+    <h1>Seu ensaio de estúdio, <em>sem estúdio.</em></h1>
+    <p class="lead">Você manda fotos do celular. A gente devolve um ensaio editorial com o seu rosto de verdade: estúdio, galeria, rua, academia. Sem fotógrafo, sem aluguel de estúdio, sem esperar semanas.</p>
+    <div class="ctas">
+      <a class="btn" href="#contato">Quero meu ensaio</a>
+      <a class="btn ghost" href="#estilos">Ver estilos</a>
+    </div>
+    <div class="stats">
+      <div><b>3 dias</b><span>prazo de entrega</span></div>
+      <div><b>8+</b><span>estilos de cenário</span></div>
+      <div><b>R$ 97</b><span>a partir de</span></div>
+    </div>
+  </div>
+  <div class="hero-img">
+    <img src="img/hero.jpg" alt="Modelo de vestido vermelho em galeria de arte, ensaio editorial gerado com IA" fetchpriority="high">
+    <div class="badge"><b>Editorial · Galeria</b>Exemplo com persona virtual</div>
+  </div>
+</header>
 
-<h2>Antes e depois</h2>
-<div class="grid">
-  <div class="ph">Em breve: primeiros ensaios de clientes</div>
-</div>
+<div class="marq" aria-hidden="true"><div>
+  Estúdio<span>✦</span>Editorial<span>✦</span>Urbano<span>✦</span>Fitness<span>✦</span>Corporativo<span>✦</span>Lifestyle<span>✦</span>Casual<span>✦</span>Viagem<span>✦</span>
+  Estúdio<span>✦</span>Editorial<span>✦</span>Urbano<span>✦</span>Fitness<span>✦</span>Corporativo<span>✦</span>Lifestyle<span>✦</span>Casual<span>✦</span>Viagem<span>✦</span>
+</div></div>
 
-<h2>Para quem é</h2>
-<div class="grid">
-  <div class="card"><h3>Profissionais</h3><p>Advogadas, médicas, corretores, consultores. Foto séria para site, LinkedIn e cartão.</p></div>
-  <div class="card"><h3>Criadoras de conteúdo</h3><p>Fotos novas para o feed e a bio do Instagram sem pagar estúdio todo mês.</p></div>
-  <div class="card"><h3>Quem tem vergonha de câmera</h3><p>Sem fotógrafo, sem pose ensaiada. Você escolhe as fotos que mais gosta.</p></div>
-</div>
+<section id="estilos" class="in">
+  <p class="kick">Portfólio</p>
+  <h2>Um ensaio, <em>vários cenários.</em></h2>
+  <p class="lead">Cada estilo seria uma diária de estúdio ou uma viagem. Aqui é só escolher.</p>
+  <div class="gal">
+    <figure><img src="img/estudio.jpg" alt="Retrato em estúdio com fundo branco, blusa preta e jeans" loading="lazy"><figcaption>Estúdio</figcaption></figure>
+    <figure><img src="img/urbano.jpg" alt="Foto externa em rua europeia com jaqueta puffer" loading="lazy"><figcaption>Urbano</figcaption></figure>
+    <figure><img src="img/perfil.jpg" alt="Perfil com blusa vermelha em fundo bege" loading="lazy"><figcaption>Editorial</figcaption></figure>
+    <figure><img src="img/fitness.jpg" alt="Conjunto fitness verde em quadra de tênis" loading="lazy"><figcaption>Fitness</figcaption></figure>
+    <figure><img src="img/corporativo.jpg" alt="Retrato com casaco caramelo em fundo cinza" loading="lazy"><figcaption>Corporativo</figcaption></figure>
+    <figure><img src="img/galeria.jpg" alt="Vestido vermelho em saguão de mármore" loading="lazy"><figcaption>Luxo</figcaption></figure>
+    <figure><img src="img/academia.jpg" alt="Look de academia em estúdio de treino" loading="lazy"><figcaption>Academia</figcaption></figure>
+    <figure><img src="img/casual.jpg" alt="Moletom preto e calça cargo na rua" loading="lazy"><figcaption>Casual</figcaption></figure>
+    <figure><img src="img/lifestyle.jpg" alt="Pose agachada com moletom cinza em estúdio" loading="lazy"><figcaption>Lifestyle</figcaption></figure>
+  </div>
+  <p class="cap">Exemplos feitos com a Mica, persona virtual criada 100% por IA. No seu ensaio, partimos das suas fotos reais.</p>
+</section>
 
-<h2>Como funciona</h2>
-<ol class="steps">
-  <li><strong>Você manda 10–15 fotos</strong> pelo WhatsApp: rosto de frente, de lado, sorrindo, corpo inteiro, com boa luz.</li>
-  <li><strong>Escolhe os estilos:</strong> estúdio fundo neutro, corporativo, externo, casual, editorial.</li>
-  <li><strong>A gente produz e faz a curadoria.</strong> Só entregamos fotos em que você se reconhece.</li>
-  <li><strong>Você recebe em alta resolução</strong> em até 3 dias úteis, com 1 rodada de ajuste.</li>
-</ol>
+<section class="alt"><div class="in">
+  <p class="kick">Para quem é</p>
+  <h2>Feito para quem <em>vive de imagem.</em></h2>
+  <div class="grid">
+    <div class="card"><h3>Modelos</h3><p>Conteúdo novo para Instagram e mídia kit sem pagar estúdio a cada sessão. Mostre versatilidade de looks e cenários.</p></div>
+    <div class="card"><h3>Criadoras de conteúdo</h3><p>Feed sempre renovado. Viagem, academia, editorial: tudo na mesma semana.</p></div>
+    <div class="card"><h3>Profissionais</h3><p>Foto de perfil e de site com cara de estúdio para LinkedIn, consultório ou escritório.</p></div>
+  </div>
+</div></section>
 
-<h2>Pacotes</h2>
-<div class="grid">
-  <div class="card"><h3>Essencial</h3><div class="price">R$ 97</div><ul><li>5 fotos</li><li>1 estilo</li><li>Ideal para foto de perfil</li></ul></div>
-  <div class="card hi"><p class="kick">Mais pedido</p><h3>Profissional</h3><div class="price">R$ 197</div><ul><li>15 fotos</li><li>3 estilos</li><li>1 rodada de ajuste</li></ul></div>
-  <div class="card"><h3>Completo</h3><div class="price">R$ 347</div><ul><li>30 fotos</li><li>6 estilos</li><li>Formatos para feed, stories e site</li><li>1 rodada de ajuste</li></ul></div>
-</div>
-<p class="lead" style="margin-top:1em">Comparando: um ensaio pessoal com fotógrafo custa em média R$ 300 a R$ 1.200 no Brasil.</p>
+<section class="in">
+  <p class="kick">Como funciona</p>
+  <h2>Quatro passos, <em>zero estúdio.</em></h2>
+  <div class="steps">
+    <div class="step"><h3>Fotos</h3><p>Mande 10 a 15 fotos pelo WhatsApp: rosto de frente e de lado, sorrindo, corpo inteiro, boa luz.</p></div>
+    <div class="step"><h3>Estilos</h3><p>Escolha cenários e looks. No Personalizado, a gente monta o conceito com você.</p></div>
+    <div class="step"><h3>Curadoria</h3><p>Geramos dezenas de opções e escolhemos só as que preservam o seu rosto e parecem foto de verdade.</p></div>
+    <div class="step"><h3>Entrega</h3><p>Fotos em alta resolução em até 3 dias úteis, com rodada de ajuste incluída.</p></div>
+  </div>
+</section>
 
-<h2>Transparência</h2>
-<div class="note">
-<ul>
-  <li>As fotos são geradas com inteligência artificial a partir das suas fotos reais. Se você publicar no Instagram, a plataforma pode mostrar o selo "Info de IA".</li>
-  <li>Só fazemos ensaio da própria pessoa que contrata, com autorização por escrito. Não aceitamos fotos de terceiros nem de menores de idade.</li>
-  <li>Suas fotos de origem são apagadas em até 30 dias após a entrega e nunca são usadas para outra finalidade.</li>
-  <li>Não indicamos para book de agência de modelos: agências pedem fotos reais sem edição.</li>
-</ul>
-</div>
+<section id="pacotes" class="alt"><div class="in">
+  <p class="kick">Pacotes</p>
+  <h2>Escolha <em>o seu.</em></h2>
+  <p class="lead">Um ensaio pessoal com fotógrafo custa em média R$ 300 a R$ 1.200 no Brasil. Aqui você recebe mais cenários por bem menos.</p>
+  <div class="prices">
+    <div class="plan">
+      <h3>Essencial</h3>
+      <p class="sub">Para testar ou trocar a foto de perfil.</p>
+      <div class="amt">R$ 97</div>
+      <p class="per">≈ R$ 19 por foto</p>
+      <ul><li>5 fotos em alta resolução</li><li>1 estilo de cenário</li><li>Entrega em até 3 dias úteis</li></ul>
+      <a class="btn ghost" href="#contato">Escolher Essencial</a>
+    </div>
+    <div class="plan hi">
+      <span class="tag">Mais escolhido</span>
+      <h3>Profissional</h3>
+      <p class="sub">O ensaio completo para renovar o feed.</p>
+      <div class="amt">R$ 247</div>
+      <p class="per">≈ R$ 12 por foto</p>
+      <ul><li>20 fotos em alta resolução</li><li>4 estilos de cenário</li><li>Formatos para feed e stories</li><li>2 rodadas de ajuste</li><li>Entrega em até 3 dias úteis</li></ul>
+      <a class="btn" href="#contato">Escolher Profissional</a>
+    </div>
+    <div class="plan">
+      <h3>Personalizado</h3>
+      <p class="sub">Conceito sob medida, do jeito que você imaginar.</p>
+      <div class="amt"><small>a partir de </small>R$ 497</div>
+      <p class="per">orçamento pelo WhatsApp</p>
+      <ul><li>Até 40 fotos em alta resolução</li><li>Cenários e looks sob medida: viagem, campanha, marca</li><li>Briefing com referências que você mandar</li><li>Ajustes ilimitados por 7 dias</li><li>Prioridade na fila de entrega</li></ul>
+      <a class="btn ghost" href="#contato">Montar meu ensaio</a>
+    </div>
+  </div>
+  <p class="launch"><b>Lançamento:</b> 30% de desconto para as 10 primeiras clientes que autorizarem o antes e depois no portfólio.</p>
+</div></section>
 
-<h2 id="contato">Vamos fazer o seu?</h2>
-<p>Chame no WhatsApp: <strong>(00) 00000-0000</strong> · Instagram: <strong>@seuperfil</strong></p>
+<section class="in">
+  <p class="kick">Dúvidas</p>
+  <h2>Perguntas <em>frequentes.</em></h2>
+  <div class="faq">
+    <details><summary>As fotos vão parecer comigo mesmo?</summary><p>Esse é o foco. Partimos das suas fotos reais e descartamos qualquer resultado em que você não se reconheça. Se algo não ficar fiel, entra na rodada de ajuste.</p></details>
+    <details><summary>As fotos são feitas com inteligência artificial?</summary><p>Sim, e somos transparentes sobre isso. Ao publicar no Instagram, a plataforma pode mostrar o selo "Info de IA".</p></details>
+    <details><summary>Posso usar no book para agência?</summary><p>Para Instagram, mídia kit e divulgação, sim. Agências de modelo costumam pedir polaroids reais sem edição, então mantenha essas à parte.</p></details>
+    <details><summary>O que acontece com as minhas fotos?</summary><p>São usadas só para o seu ensaio e apagadas em até 30 dias após a entrega. Nada vai para o portfólio sem a sua autorização por escrito.</p></details>
+    <details><summary>Posso mandar foto de outra pessoa?</summary><p>Não. Só fazemos ensaio da própria pessoa que contrata, maior de idade e com autorização assinada.</p></details>
+    <details><summary>Como pago?</summary><p>Pix. Metade para começar e metade na entrega.</p></details>
+  </div>
+</section>
 
-<footer>Retrato Studio · ensaios fotográficos com inteligência artificial</footer>
-</div>
+<section id="contato" class="alt final"><div class="in">
+  <p class="kick">Vamos começar</p>
+  <h2>Seu próximo ensaio <em>começa no celular.</em></h2>
+  <p class="lead">Chame no WhatsApp, conte o que você imagina e receba as primeiras fotos em até 3 dias úteis.</p>
+  <a class="btn" href="https://wa.me/5500000000000?text=Oi!%20Quero%20saber%20sobre%20o%20ensaio%20com%20IA">Falar no WhatsApp</a>
+  <p class="cap" style="margin-top:18px">WhatsApp (00) 00000-0000 · Instagram @seuperfil</p>
+</div></section>
+
+<footer><div class="in">
+  <span>© 2026 Retrato Studio · Ensaio fotográfico com IA</span>
+  <span>Imagens geradas com inteligência artificial</span>
+</div></footer>
+
 </body>
 </html>
